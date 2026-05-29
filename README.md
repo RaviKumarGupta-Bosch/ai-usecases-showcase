@@ -43,6 +43,17 @@ ai-usecases-showcase/
 │   ├── Manufacturing/               ← 4 use-case projects
 │   └── Finance/                     ← 4 use-case projects
 │
+├── 📁 tutorials/                      # Python deep-dive tutorials
+│   ├── LangChain-LangGraph-LangSmith/  ← chains, graphs, observability
+│   ├── AutoGen/                        ← multi-agent conversations
+│   ├── CrewAI/                         ← role-based agent crews
+│   ├── RAG/                            ← retrieval-augmented generation
+│   ├── MCP/                            ← Model Context Protocol
+│   ├── VectorDatabases/                ← FAISS, Chroma, embeddings
+│   ├── LlamaIndex/                     ← data framework & agents
+│   ├── PromptEngineering/              ← prompting techniques
+│   └── Ollama/                         ← local LLMs, offline RAG, vision
+│
 ├── requirements.txt
 ├── CONTRIBUTING.md
 └── README.md
@@ -118,9 +129,48 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for step-by-step instructions.
 
 ---
 
+## 📚 Python Tutorials
+
+Step-by-step, runnable Python tutorials covering the AI ecosystem — each folder has its own `README.md`, `requirements.txt`, and `.env.example`.
+
+| Tutorial | Topics Covered |
+|----------|---------------|
+| [LangChain-LangGraph-LangSmith](./tutorials/LangChain-LangGraph-LangSmith/) | Chains, LCEL, agents, graphs, observability |
+| [AutoGen](./tutorials/AutoGen/) | Multi-agent conversations, tool use, group chat |
+| [CrewAI](./tutorials/CrewAI/) | Role-based agent crews, flows, hierarchical process |
+| [RAG](./tutorials/RAG/) | Naive RAG → advanced retrieval, hybrid search, HyDE, CRAG |
+| [MCP](./tutorials/MCP/) | Model Context Protocol — servers, clients, tool calls |
+| [VectorDatabases](./tutorials/VectorDatabases/) | Embeddings primer, FAISS, Chroma, semantic search |
+| [LlamaIndex](./tutorials/LlamaIndex/) | Data ingestion, query engines, router, ReAct agents |
+| [PromptEngineering](./tutorials/PromptEngineering/) | Zero/few-shot, CoT, roles, structured output, injection defence |
+| [Ollama](./tutorials/Ollama/) | Local LLMs, streaming, LangChain integration, offline RAG, vision |
+
+Each tutorial is structured as:
+```
+<Tutorial>/
+├── README.md              # curriculum & quick-start
+├── requirements.txt       # pinned dependencies
+├── .env.example           # required env vars
+├── 01-basics/
+├── 02-intermediate/
+├── 03-advanced/
+└── 04-UseCases/
+```
+
+---
+
 ## 📄 License
 
 MIT License — free to use, modify, and share.
+
+---
+
+## 👤 Author
+
+**Ravi Gupta**
+AI Developer & Enthusiast | Full Stack .NET & Angular Developer | Tech Lead
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ravi%20Gupta-0077B5?logo=linkedin)](https://www.linkedin.com/in/ravi-gupta-28b40b36)
 
 ---
 
