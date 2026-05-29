@@ -1,8 +1,0 @@
-transaction_id,user_id,amount_usd,merchant_category,location_country,user_home_country,hour_of_day,is_online,prev_30d_avg_usd
-TXN-0001,USR-101,48.50,Grocery,US,US,14,0,95.20
-TXN-0002,USR-102,320.00,Electronics,US,US,18,1,280.00
-TXN-0003,USR-102,4200.00,Wire Transfer,NG,US,3,1,298.50
-TXN-0004,USR-103,15.00,Coffee Shop,CA,CA,8,0,45.00
-TXN-0005,USR-104,890.00,Jewellery,RU,DE,2,1,120.00
-TXN-0006,USR-105,55.00,Restaurant,US,US,19,0,200.00
-TXN-0007,USR-101,3800.00,Electronics,CN,US,1,1,95.20
