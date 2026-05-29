@@ -1,0 +1,64 @@
+{
+  "investor_profile": {
+    "risk_tolerance": "moderate",
+    "horizon_years": 10
+  },
+  "holdings": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "asset_class": "Equity",
+      "value_usd": 7875,
+      "allocation_pct": 15.0
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corp.",
+      "asset_class": "Equity",
+      "value_usd": 6300,
+      "allocation_pct": 12.0
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla Inc.",
+      "asset_class": "Equity",
+      "value_usd": 6300,
+      "allocation_pct": 12.0
+    },
+    {
+      "ticker": "VTI",
+      "name": "Vanguard Total Market ETF",
+      "asset_class": "ETF",
+      "value_usd": 10500,
+      "allocation_pct": 20.0
+    },
+    {
+      "ticker": "BND",
+      "name": "Vanguard Bond ETF",
+      "asset_class": "Bond ETF",
+      "value_usd": 2625,
+      "allocation_pct": 5.0
+    },
+    {
+      "ticker": "GLD",
+      "name": "SPDR Gold Shares",
+      "asset_class": "Commodity",
+      "value_usd": 5250,
+      "allocation_pct": 10.0
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com Inc.",
+      "asset_class": "Equity",
+      "value_usd": 7350,
+      "allocation_pct": 14.0
+    },
+    {
+      "ticker": "CASH",
+      "name": "Cash / Money Market",
+      "asset_class": "Cash",
+      "value_usd": 6300,
+      "allocation_pct": 12.0
+    }
+  ]
+}
