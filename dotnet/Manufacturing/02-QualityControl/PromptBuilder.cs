@@ -13,19 +13,19 @@ public static class PromptBuilder
             sb.AppendLine($"  {name}: actual={pair.Actual}, spec={pair.Spec}");
         sb.AppendLine($"Visual Notes: {batch.VisualNotes}");
 
-        return $"""
+        return $$"""
             You are a manufacturing quality control AI.
             Inspect the following batch measurements and determine PASS or FAIL.
 
-            {sb}
+            {{sb}}
 
             Respond ONLY with a JSON object:
-            {{
+            {
               "verdict": "PASS | FAIL",
               "confidence_pct": <0-100>,
               "issues_found": ["<issue1>", "<issue2>"],
               "recommended_action": "<short action>"
-            }}
+            }
             """;
     }
 }
