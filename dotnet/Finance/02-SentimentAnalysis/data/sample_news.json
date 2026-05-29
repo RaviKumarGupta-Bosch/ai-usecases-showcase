@@ -1,0 +1,8 @@
+[
+  {"id":"NEWS-001","headline":"Apple reports record quarterly revenue of $120B, beating analyst expectations","source":"Reuters","published_at":"2024-12-09"},
+  {"id":"NEWS-002","headline":"Oil prices steady as OPEC+ holds production cuts into 2025","source":"Bloomberg","published_at":"2024-12-09"},
+  {"id":"NEWS-003","headline":"Fed signals three rate cuts in 2025 amid cooling inflation data","source":"Financial Times","published_at":"2024-12-10"},
+  {"id":"NEWS-004","headline":"Supply chain disruptions hit semiconductor industry; chip shortages expected in Q1 2025","source":"WSJ","published_at":"2024-12-10"},
+  {"id":"NEWS-005","headline":"Major regional bank reports $2.1B Q3 loss driven by commercial real estate bad loans","source":"CNBC","published_at":"2024-12-11"},
+  {"id":"NEWS-006","headline":"Global manufacturing PMI holds steady at 50.2, signalling modest expansion","source":"Reuters","published_at":"2024-12-11"}
+]
