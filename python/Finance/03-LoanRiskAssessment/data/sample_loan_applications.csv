@@ -1,0 +1,7 @@
+application_id,age,annual_income_usd,loan_amount_usd,loan_purpose,credit_score,existing_debt_usd,employment_years,has_collateral
+APP-0001,34,75000,15000,Car Purchase,720,8000,6,0
+APP-0002,42,120000,85000,Real Estate,720,82000,10,1
+APP-0003,28,45000,5000,Education,680,2500,2,0
+APP-0004,55,38000,25000,Personal,510,18000,1,0
+APP-0005,47,200000,150000,Business,790,45000,15,1
+APP-0006,23,32000,8000,Debt Consolidation,595,12000,1,0

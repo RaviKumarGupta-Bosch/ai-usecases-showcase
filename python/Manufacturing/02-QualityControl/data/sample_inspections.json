@@ -1,0 +1,52 @@
+[
+  {
+    "batch_id": "BATCH-001",
+    "product": "Aluminium Bracket",
+    "visual_notes": "No visible cracks. Surface finish smooth.",
+    "measurements": {
+      "thickness_mm": {"actual": 5.01, "spec": "5.0 +/- 0.1"},
+      "width_mm": {"actual": 25.2, "spec": "25.0 +/- 0.3"},
+      "weight_g": {"actual": 142, "spec": "140-145"}
+    }
+  },
+  {
+    "batch_id": "BATCH-002",
+    "product": "Steel Shaft",
+    "visual_notes": "Minor surface oxidation on one end. No cracks.",
+    "measurements": {
+      "diameter_mm": {"actual": 12.4, "spec": "12.5 +/- 0.05"},
+      "length_mm": {"actual": 200.1, "spec": "200.0 +/- 0.5"},
+      "hardness_hrc": {"actual": 58, "spec": "55-62"}
+    }
+  },
+  {
+    "batch_id": "BATCH-003",
+    "product": "Valve Housing",
+    "visual_notes": "Visible scratch on outer surface approx 5mm. No deformation.",
+    "measurements": {
+      "wall_thickness_mm": {"actual": 2.1, "spec": "2.5 +/- 0.2"},
+      "bore_diameter_mm": {"actual": 18.0, "spec": "18.0 +/- 0.1"},
+      "weight_g": {"actual": 312, "spec": "310-320"}
+    }
+  },
+  {
+    "batch_id": "BATCH-004",
+    "product": "Plastic Gear",
+    "visual_notes": "Clean, no flash or sink marks.",
+    "measurements": {
+      "tooth_pitch_mm": {"actual": 3.0, "spec": "3.0 +/- 0.05"},
+      "outer_diameter_mm": {"actual": 50.0, "spec": "50.0 +/- 0.2"},
+      "concentricity_mm": {"actual": 0.03, "spec": "max 0.05"}
+    }
+  },
+  {
+    "batch_id": "BATCH-005",
+    "product": "Gear Assembly",
+    "visual_notes": "All components aligned correctly. No play detected.",
+    "measurements": {
+      "backlash_mm": {"actual": 0.08, "spec": "0.05-0.12"},
+      "axial_play_mm": {"actual": 0.1, "spec": "max 0.15"},
+      "torque_nm": {"actual": 22.5, "spec": "20-25"}
+    }
+  }
+]
