@@ -52,7 +52,8 @@ ai-usecases-showcase/
 │   ├── VectorDatabases/                ← FAISS, Chroma, embeddings
 │   ├── LlamaIndex/                     ← data framework & agents
 │   ├── PromptEngineering/              ← prompting techniques
-│   └── Ollama/                         ← local LLMs, offline RAG, vision
+│   ├── Ollama/                         ← local LLMs, offline RAG, vision
+│   └── Python/                         ← Python fundamentals for AI developers
 │
 ├── requirements.txt
 ├── CONTRIBUTING.md
@@ -144,6 +145,7 @@ Step-by-step, runnable Python tutorials covering the AI ecosystem — each folde
 | [LlamaIndex](./tutorials/LlamaIndex/) | Data ingestion, query engines, router, ReAct agents |
 | [PromptEngineering](./tutorials/PromptEngineering/) | Zero/few-shot, CoT, roles, structured output, injection defence |
 | [Ollama](./tutorials/Ollama/) | Local LLMs, streaming, LangChain integration, offline RAG, vision |
+| [Python](./tutorials/Python/) | Data types, OOP, type hints, generators, decorators, async/await, functional patterns, AI dev patterns |
 
 Each tutorial is structured as:
 ```
