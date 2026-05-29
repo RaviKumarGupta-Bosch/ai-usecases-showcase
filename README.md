@@ -4,6 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![.NET 8](https://img.shields.io/badge/.NET-8.0-purple.svg)](https://dotnet.microsoft.com/download/dotnet/8.0)
 [![OpenAI](https://img.shields.io/badge/OpenAI-API-green.svg)](https://openai.com/)
 [![Ollama/LLaMA](https://img.shields.io/badge/LLaMA-Ollama-orange.svg)](https://ollama.ai/)
 
@@ -16,11 +17,12 @@ This repository is a **beginner-friendly showcase** of practical AI applications
 - 🏭 **Manufacturing** — predictive maintenance, quality control, demand forecasting, anomaly detection
 - 💰 **Finance** — fraud detection, sentiment analysis, loan risk assessment, portfolio advising
 
-Each use-case is **self-contained** and runs with either:
-- **OpenAI GPT-4o-mini** (cloud, requires API key)
-- **LLaMA 3 via [Ollama](https://ollama.ai/)** (free, runs locally on your machine)
+Every use-case is implemented in **both Python and C# (.NET 8)**, each supporting two AI backends:
 
-No complicated infrastructure needed. Just Python, a few packages, and curiosity.
+| Backend | Python | .NET |
+|---------|--------|------|
+| OpenAI GPT-4o-mini (cloud) | `OPENAI_API_KEY` | `AZURE_OPENAI_KEY` + `AZURE_OPENAI_ENDPOINT` |
+| LLaMA 3 via Ollama (local) | `AI_PROVIDER=ollama` | `AI_PROVIDER=ollama` |
 
 ---
 
@@ -29,21 +31,15 @@ No complicated infrastructure needed. Just Python, a few packages, and curiosity
 ```
 ai-usecases-showcase/
 │
-├── 📁 manufacturing/               # AI use-cases for manufacturing
-│   ├── README.md
-│   ├── 01-predictive-maintenance/  # Predict machine failures from sensor data
-│   ├── 02-quality-control/         # Detect product defects with AI
-│   ├── 03-demand-forecasting/      # Forecast production demand
-│   └── 04-anomaly-detection/       # Spot unusual production patterns
+├── 📁 manufacturing/               # Python AI use-cases for manufacturing
+├── 📁 finance/                     # Python AI use-cases for finance
 │
-├── 📁 finance/                     # AI use-cases for finance
-│   ├── README.md
-│   ├── 01-fraud-detection/         # Flag suspicious transactions
-│   ├── 02-sentiment-analysis/      # Analyze financial news sentiment
-│   ├── 03-loan-risk-assessment/    # Score credit applications
-│   └── 04-portfolio-advisor/       # AI-powered investment recommendations
-│
-├── 📁 dotnet-future/               # Future .NET / C# implementations (roadmap)
+├── 📁 dotnet/                      # C# / .NET 8 implementations
+│   ├── AIUsecasesShowcase.sln
+│   ├── Shared/Core/                # IAIService, OpenAIService, OllamaService
+│   ├── Shared/Data/                # CsvLoader, JsonLoader
+│   ├── Manufacturing/              # 4 use-case projects
+│   └── Finance/                   # 4 use-case projects
 │
 ├── requirements.txt
 ├── CONTRIBUTING.md
@@ -52,93 +48,71 @@ ai-usecases-showcase/
 
 ---
 
-## 🚀 Quick Start
-
-### 1. Clone the repository
+## 🚀 Quick Start — Python
 
 ```bash
 git clone https://github.com/RaviKumarGupta-Bosch/ai-usecases-showcase.git
 cd ai-usecases-showcase
-```
-
-### 2. Install Python dependencies
-
-```bash
 pip install -r requirements.txt
-```
 
-### 3. Choose your AI provider
+# OpenAI
+set OPENAI_API_KEY=your-key    # Windows
+export OPENAI_API_KEY=your-key # macOS/Linux
 
-**Option A: OpenAI (cloud)**
-```bash
-# Windows
-set OPENAI_API_KEY=your-api-key-here
-
-# macOS / Linux
-export OPENAI_API_KEY=your-api-key-here
-```
-Get a free API key at [platform.openai.com](https://platform.openai.com).
-
-**Option B: LLaMA via Ollama (local, free)**
-```bash
-# 1. Install Ollama from https://ollama.ai/
-# 2. Pull the LLaMA 3 model
+# OR local LLaMA
 ollama pull llama3
+set AI_PROVIDER=ollama
 
-# 3. Tell the scripts to use Ollama
-set AI_PROVIDER=ollama   # Windows
-export AI_PROVIDER=ollama  # macOS/Linux
-```
-
-### 4. Run any use-case
-
-```bash
 cd manufacturing/01-predictive-maintenance
 python predictive_maintenance.py
 ```
 
 ---
 
+## 🚀 Quick Start — .NET 8
+
+```bash
+cd dotnet
+dotnet restore AIUsecasesShowcase.sln
+
+# Azure OpenAI
+set AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
+set AZURE_OPENAI_KEY=your-key
+
+# OR local LLaMA
+set AI_PROVIDER=ollama
+
+cd Manufacturing/01-PredictiveMaintenance
+dotnet run
+```
+
+---
+
 ## 🏭 Manufacturing Use-Cases
 
-| # | Use-Case | Description | Key Concepts |
-|---|----------|-------------|--------------|
-| 01 | [Predictive Maintenance](./manufacturing/01-predictive-maintenance/) | Analyze sensor data to predict machine failures | AI + IoT data |
-| 02 | [Quality Control](./manufacturing/02-quality-control/) | Classify products as pass/fail using AI judgment | AI inspection |
-| 03 | [Demand Forecasting](./manufacturing/03-demand-forecasting/) | Forecast future production demand with AI insights | Time-series + AI |
-| 04 | [Anomaly Detection](./manufacturing/04-anomaly-detection/) | Detect unusual patterns in production line data | Statistical + AI |
+| # | Python | .NET | Description |
+|---|--------|------|-------------|
+| 01 | [predictive-maintenance](./manufacturing/01-predictive-maintenance/) | [PredictiveMaintenance](./dotnet/Manufacturing/01-PredictiveMaintenance/) | Analyse sensor data to predict machine failures |
+| 02 | [quality-control](./manufacturing/02-quality-control/) | [QualityControl](./dotnet/Manufacturing/02-QualityControl/) | Classify production batches as PASS / FAIL |
+| 03 | [demand-forecasting](./manufacturing/03-demand-forecasting/) | [DemandForecasting](./dotnet/Manufacturing/03-DemandForecasting/) | Forecast demand from 12-month sales history |
+| 04 | [anomaly-detection](./manufacturing/04-anomaly-detection/) | [AnomalyDetection](./dotnet/Manufacturing/04-AnomalyDetection/) | Detect anomalies on production lines |
 
 ---
 
 ## 💰 Finance Use-Cases
 
-| # | Use-Case | Description | Key Concepts |
-|---|----------|-------------|--------------|
-| 01 | [Fraud Detection](./finance/01-fraud-detection/) | Flag potentially fraudulent financial transactions | Classification + AI |
-| 02 | [Sentiment Analysis](./finance/02-sentiment-analysis/) | Score financial news as bullish, bearish, or neutral | NLP + AI |
-| 03 | [Loan Risk Assessment](./finance/03-loan-risk-assessment/) | Rate credit applications with AI reasoning | Risk scoring + AI |
-| 04 | [Portfolio Advisor](./finance/04-portfolio-advisor/) | Get AI-powered investment rebalancing advice | Portfolio + AI |
+| # | Python | .NET | Description |
+|---|--------|------|-------------|
+| 01 | [fraud-detection](./finance/01-fraud-detection/) | [FraudDetection](./dotnet/Finance/01-FraudDetection/) | Flag suspicious financial transactions |
+| 02 | [sentiment-analysis](./finance/02-sentiment-analysis/) | [SentimentAnalysis](./dotnet/Finance/02-SentimentAnalysis/) | Score financial news as BULLISH / BEARISH / NEUTRAL |
+| 03 | [loan-risk-assessment](./finance/03-loan-risk-assessment/) | [LoanRiskAssessment](./dotnet/Finance/03-LoanRiskAssessment/) | Rate credit applications with AI reasoning |
+| 04 | [portfolio-advisor](./finance/04-portfolio-advisor/) | [PortfolioAdvisor](./dotnet/Finance/04-PortfolioAdvisor/) | AI-powered investment rebalancing recommendations |
 
 ---
 
 ## 🔧 How to Add a New Use-Case
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for step-by-step instructions on:
-- Structuring your use-case folder
-- Writing beginner-friendly Python scripts
-- Supporting both OpenAI and Ollama backends
-- Adding sample data and a README
-
----
-
-## 🔮 Future: .NET / C# Version
-
-A C# implementation of these use-cases is planned using:
-- **Microsoft Semantic Kernel** (AI orchestration)
-- **Azure OpenAI Service**
-- **ML.NET** (for local model inference)
-
-See [dotnet-future/README.md](./dotnet-future/README.md) for the full roadmap.
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for step-by-step instructions.
 
 ---
 
@@ -150,6 +124,6 @@ MIT License — free to use, modify, and share.
 
 ## ⭐ Show Your Support
 
-If this repository helps you learn or inspires a project, please give it a ⭐ — it really helps!
+If this repository helps you learn or inspires a project, please give it a ⭐!
 
-Built with ❤️ to showcase practical, hands-on AI skills in real-world industry domains.
+Built with ❤️ to showcase practical, hands-on AI skills across Python and .NET.
