@@ -31,15 +31,17 @@ Every use-case is implemented in **both Python and C# (.NET 8)**, each supportin
 ```
 ai-usecases-showcase/
 │
-├── 📁 manufacturing/               # Python AI use-cases for manufacturing
-├── 📁 finance/                     # Python AI use-cases for finance
+├── 📁 python/                         # Python implementations
+│   ├── Shared/                      ← ai_service.py, data_loader.py, json_helper.py
+│   ├── Manufacturing/               ← 4 use-case folders
+│   └── Finance/                     ← 4 use-case folders
 │
-├── 📁 dotnet/                      # C# / .NET 8 implementations
+├── 📁 dotnet/                         # C# / .NET 8 implementations
 │   ├── AIUsecasesShowcase.sln
-│   ├── Shared/Core/                # IAIService, OpenAIService, OllamaService
-│   ├── Shared/Data/                # CsvLoader, JsonLoader
-│   ├── Manufacturing/              # 4 use-case projects
-│   └── Finance/                   # 4 use-case projects
+│   ├── Shared/Core/                 ← IAIService, OpenAIService, OllamaService
+│   ├── Shared/Data/                 ← CsvLoader, JsonLoader
+│   ├── Manufacturing/               ← 4 use-case projects
+│   └── Finance/                     ← 4 use-case projects
 │
 ├── requirements.txt
 ├── CONTRIBUTING.md
@@ -63,8 +65,8 @@ export OPENAI_API_KEY=your-key # macOS/Linux
 ollama pull llama3
 set AI_PROVIDER=ollama
 
-cd manufacturing/01-predictive-maintenance
-python predictive_maintenance.py
+cd python/Manufacturing/01-PredictiveMaintenance
+python main.py
 ```
 
 ---
@@ -92,10 +94,10 @@ dotnet run
 
 | # | Python | .NET | Description |
 |---|--------|------|-------------|
-| 01 | [predictive-maintenance](./manufacturing/01-predictive-maintenance/) | [PredictiveMaintenance](./dotnet/Manufacturing/01-PredictiveMaintenance/) | Analyse sensor data to predict machine failures |
-| 02 | [quality-control](./manufacturing/02-quality-control/) | [QualityControl](./dotnet/Manufacturing/02-QualityControl/) | Classify production batches as PASS / FAIL |
-| 03 | [demand-forecasting](./manufacturing/03-demand-forecasting/) | [DemandForecasting](./dotnet/Manufacturing/03-DemandForecasting/) | Forecast demand from 12-month sales history |
-| 04 | [anomaly-detection](./manufacturing/04-anomaly-detection/) | [AnomalyDetection](./dotnet/Manufacturing/04-AnomalyDetection/) | Detect anomalies on production lines |
+| 01 | [01-PredictiveMaintenance](./python/Manufacturing/01-PredictiveMaintenance/) | [PredictiveMaintenance](./dotnet/Manufacturing/01-PredictiveMaintenance/) | Analyse sensor data to predict machine failures |
+| 02 | [02-QualityControl](./python/Manufacturing/02-QualityControl/) | [QualityControl](./dotnet/Manufacturing/02-QualityControl/) | Classify production batches as PASS / FAIL |
+| 03 | [03-DemandForecasting](./python/Manufacturing/03-DemandForecasting/) | [DemandForecasting](./dotnet/Manufacturing/03-DemandForecasting/) | Forecast demand from 12-month sales history |
+| 04 | [04-AnomalyDetection](./python/Manufacturing/04-AnomalyDetection/) | [AnomalyDetection](./dotnet/Manufacturing/04-AnomalyDetection/) | Detect anomalies on production lines |
 
 ---
 
@@ -103,10 +105,10 @@ dotnet run
 
 | # | Python | .NET | Description |
 |---|--------|------|-------------|
-| 01 | [fraud-detection](./finance/01-fraud-detection/) | [FraudDetection](./dotnet/Finance/01-FraudDetection/) | Flag suspicious financial transactions |
-| 02 | [sentiment-analysis](./finance/02-sentiment-analysis/) | [SentimentAnalysis](./dotnet/Finance/02-SentimentAnalysis/) | Score financial news as BULLISH / BEARISH / NEUTRAL |
-| 03 | [loan-risk-assessment](./finance/03-loan-risk-assessment/) | [LoanRiskAssessment](./dotnet/Finance/03-LoanRiskAssessment/) | Rate credit applications with AI reasoning |
-| 04 | [portfolio-advisor](./finance/04-portfolio-advisor/) | [PortfolioAdvisor](./dotnet/Finance/04-PortfolioAdvisor/) | AI-powered investment rebalancing recommendations |
+| 01 | [01-FraudDetection](./python/Finance/01-FraudDetection/) | [FraudDetection](./dotnet/Finance/01-FraudDetection/) | Flag suspicious financial transactions |
+| 02 | [02-SentimentAnalysis](./python/Finance/02-SentimentAnalysis/) | [SentimentAnalysis](./dotnet/Finance/02-SentimentAnalysis/) | Score financial news as BULLISH / BEARISH / NEUTRAL |
+| 03 | [03-LoanRiskAssessment](./python/Finance/03-LoanRiskAssessment/) | [LoanRiskAssessment](./dotnet/Finance/03-LoanRiskAssessment/) | Rate credit applications with AI reasoning |
+| 04 | [04-PortfolioAdvisor](./python/Finance/04-PortfolioAdvisor/) | [PortfolioAdvisor](./dotnet/Finance/04-PortfolioAdvisor/) | AI-powered investment rebalancing recommendations |
 
 ---
 
