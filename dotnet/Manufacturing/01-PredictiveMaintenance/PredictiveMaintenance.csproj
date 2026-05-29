@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>PredictiveMaintenance</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Core\Core.csproj" />
+    <ProjectReference Include="..\..\Shared\Data\Data.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\sample_sensor_data.csv" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

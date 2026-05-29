@@ -1,0 +1,47 @@
+[
+  {
+    "batch_id": "BATCH-001",
+    "measurements": {
+      "diameter_mm":    {"actual": 50.02, "spec": 50.0},
+      "hardness_hrc":   {"actual": 62.1,  "spec": 60.0},
+      "surface_finish": {"actual": 0.8,   "spec": 1.0}
+    },
+    "visual_notes": "No visible defects"
+  },
+  {
+    "batch_id": "BATCH-002",
+    "measurements": {
+      "diameter_mm":    {"actual": 49.5,  "spec": 50.0},
+      "hardness_hrc":   {"actual": 55.0,  "spec": 60.0},
+      "surface_finish": {"actual": 1.8,   "spec": 1.0}
+    },
+    "visual_notes": "Surface scratches observed on 3 parts"
+  },
+  {
+    "batch_id": "BATCH-003",
+    "measurements": {
+      "diameter_mm":    {"actual": 50.0,  "spec": 50.0},
+      "hardness_hrc":   {"actual": 61.5,  "spec": 60.0},
+      "surface_finish": {"actual": 0.9,   "spec": 1.0}
+    },
+    "visual_notes": "Clean batch"
+  },
+  {
+    "batch_id": "BATCH-004",
+    "measurements": {
+      "diameter_mm":    {"actual": 50.8,  "spec": 50.0},
+      "hardness_hrc":   {"actual": 58.0,  "spec": 60.0},
+      "surface_finish": {"actual": 2.2,   "spec": 1.0}
+    },
+    "visual_notes": "Rough texture, possible tooling wear"
+  },
+  {
+    "batch_id": "BATCH-005",
+    "measurements": {
+      "diameter_mm":    {"actual": 49.99, "spec": 50.0},
+      "hardness_hrc":   {"actual": 60.8,  "spec": 60.0},
+      "surface_finish": {"actual": 0.95,  "spec": 1.0}
+    },
+    "visual_notes": "Minor discoloration on 1 part, otherwise OK"
+  }
+]
