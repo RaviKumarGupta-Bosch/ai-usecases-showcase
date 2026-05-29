@@ -33,6 +33,10 @@ Thumbs.db
 .ipynb_checkpoints/
 *.ipynb
 
+# .NET build output
+bin/
+obj/
+
 # Logs / output
 *.log
 output/

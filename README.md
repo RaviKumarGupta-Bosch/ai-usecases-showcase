@@ -134,30 +134,33 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for step-by-step instructions.
 
 Step-by-step, runnable Python tutorials covering the AI ecosystem — each folder has its own `README.md`, `requirements.txt`, and `.env.example`.
 
-| Tutorial | Topics Covered |
-|----------|---------------|
-| [LangChain-LangGraph-LangSmith](./tutorials/LangChain-LangGraph-LangSmith/) | Chains, LCEL, agents, graphs, observability |
-| [AutoGen](./tutorials/AutoGen/) | Multi-agent conversations, tool use, group chat |
-| [CrewAI](./tutorials/CrewAI/) | Role-based agent crews, flows, hierarchical process |
-| [RAG](./tutorials/RAG/) | Naive RAG → advanced retrieval, hybrid search, HyDE, CRAG |
-| [MCP](./tutorials/MCP/) | Model Context Protocol — servers, clients, tool calls |
-| [VectorDatabases](./tutorials/VectorDatabases/) | Embeddings primer, FAISS, Chroma, semantic search |
-| [LlamaIndex](./tutorials/LlamaIndex/) | Data ingestion, query engines, router, ReAct agents |
-| [PromptEngineering](./tutorials/PromptEngineering/) | Zero/few-shot, CoT, roles, structured output, injection defence |
-| [Ollama](./tutorials/Ollama/) | Local LLMs, streaming, LangChain integration, offline RAG, vision |
-| [Python](./tutorials/Python/) | Data types, OOP, type hints, generators, decorators, async/await, functional patterns, AI dev patterns |
+Every tutorial follows a consistent four-tier progression:
 
-Each tutorial is structured as:
 ```
 <Tutorial>/
 ├── README.md              # curriculum & quick-start
 ├── requirements.txt       # pinned dependencies
-├── .env.example           # required env vars
-├── 01-basics/
-├── 02-intermediate/
-├── 03-advanced/
-└── 04-UseCases/
+├── .env.example           # required environment variables
+├── 01-basics/             # core concepts, first working examples
+├── 02-intermediate/       # real-world patterns, integrations
+├── 03-advanced/           # production patterns, performance, architecture
+└── 04-UseCases/           # end-to-end domain applications
 ```
+
+### Tutorial Overview
+
+| Tutorial | Topics Covered |
+|----------|----------------|
+| [LangChain-LangGraph-LangSmith](./tutorials/LangChain-LangGraph-LangSmith/) | LCEL chains, memory, tools, LangGraph stateful agents, streaming, LangSmith observability & evaluation |
+| [AutoGen](./tutorials/AutoGen/) | Two-agent chat, group chat, tool use, termination conditions, nested chats, async conversations, multi-stage pipelines |
+| [CrewAI](./tutorials/CrewAI/) | Agents & tasks, crew processes, custom tools, task context & Pydantic outputs, Flows with `@start`/`@listen`/`@router`, state management |
+| [RAG](./tutorials/RAG/) | Naive RAG, advanced retrieval, hybrid search, HyDE, CRAG, conversational RAG |
+| [MCP](./tutorials/MCP/) | Protocol concepts, FastMCP server, client connections, resources & URI templates, prompt templates, multi-server architecture, tool namespacing |
+| [VectorDatabases](./tutorials/VectorDatabases/) | Embeddings primer, FAISS, Chroma, metadata filtering, MMR, re-ranking, hybrid BM25+dense search |
+| [LlamaIndex](./tutorials/LlamaIndex/) | Document indexing, router query engine, ReAct agents, multi-document Q&A |
+| [PromptEngineering](./tutorials/PromptEngineering/) | Zero/few-shot, chain-of-thought, role prompting, structured output, prompt injection defence, prompt library |
+| [Ollama](./tutorials/Ollama/) | Model management, generate & chat APIs, LangChain integration, local RAG, structured output, vision models, private AI assistant |
+| [Python](./tutorials/Python/) | Data types & structures, functions & scope, OOP, type hints & dataclasses, generators, decorators, async/await, functional patterns, packaging, AI dev patterns |
 
 ---
 
